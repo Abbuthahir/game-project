@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5 d-flex align-items-center justify-content-center">
+  <div class="board">
+    <div *ngFor="let cell of gameBoard; let i = index" class="cell" (click)="makeMove(i)">
+      {{ cell }}
+    </div>
+  </div>
+  <p *ngIf="winner" class="winner-animation mx-5">The winner is <strong> {{ winner }}</strong></p>
+  </div>
+  
+  <button class="btn btn-primary mt-5" (click)="resetGame()">Refresh</button>
+  
