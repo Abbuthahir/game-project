@@ -4,6 +4,7 @@ import { FindFruitComponent } from './find-fruit/find-fruit.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TicTacToeComponent } from './tic-tac-toe/tic-tac-toe.component';
+import { TrialComponent } from './trial/trial.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:'findfruit',
     component:FindFruitComponent
+  },
+  {
+    path:'trial',
+    component:TrialComponent
   },
  
 ];

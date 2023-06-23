@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<!-- <div class="card">
+    <div class="card-body d-flex justify-content-center">
+        <div class="row">
+            <div class="col-4 mb-3" *ngFor="let employee of employees; let i=index">
+                <button class="btn btn-primary" (click)="showEmployee(employee, i)">{{employee.show ? employee.name :
+                    'Empty'}}</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<nav>
+    <button type="button" (click)="toggle()">Toggle Open/Close</button>
+  </nav>
+  
+  <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+  </div>
