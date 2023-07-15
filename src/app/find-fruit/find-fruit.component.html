@@ -1,29 +1,8 @@
 <app-navbar></app-navbar>
-<!-- <div class="container mt-5 d-flex align-items-center justify-content-center">
-  <div class="card shadow " style="width: 800px">
-    <div class="container">
-      <p class=" score d-flex align-items-center justify-content-center">Score: {{score}}</p> 
-    </div>
-    <div class="card-body" >
-      <div class="row">
-        <div class="col-3 " *ngFor="let fruit of fruits; let i = index">
-          <div [ngClass]="{ 'flipped': fruit.showImage}" class="text-center border mb-3"  (click)="toggleImage(fruit, i)">
-            <img *ngIf="fruit.showImage || fruit.matched" src="{{fruit.imagePath}}" width="100" height="100"
-            alt="images">
-            <img *ngIf="!fruit.showImage" src="../../assets/watermelon.png" width="100" height="100"
-            alt="images">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
 <div class="container">
   <div class="card shadow mt-2" [@flipAnimation]="flip ? 'flipped' : 'default'">
     <div *ngIf="!winningGif">
-      <div class="container">
+      <div>
         <p class=" score d-flex align-items-center justify-content-center">Score: {{score}}</p>
       </div>
       <hr>
@@ -31,11 +10,9 @@
         <div class="row">
           <div class="col-3 mb-2 d-flex justify-content-center" *ngFor="let fruit of fruits; let i = index">
             <div (click)="toggleImage(fruit, i)">
-              <!-- <div class="image-box"> -->
               <img *ngIf="fruit.showImage" src="{{fruit.imagePath}}"  width="110" height="100" alt="Fruits" >
               <img *ngIf="!fruit.showImage" src="../../assets/food-group-icon__fruits--circle.png" width="110"
                 height="100" alt="watermelon">
-              <!-- </div> -->
             </div>
           </div>
         </div>

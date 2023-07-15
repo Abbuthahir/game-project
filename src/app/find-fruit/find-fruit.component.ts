@@ -14,12 +14,11 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   ]
 })
 export class FindFruitComponent {
-  display: any;
+  // display: any;
   fruits: any = [];
   flip = false;
   winningGif = false;
   constructor() {
-    // this.timer(1);
     this.fruits = [
       { imagePath: '../assets/animated-purple (1).png', showImage: false},
       { imagePath: '../assets/animated-banana (1).png', showImage: false},
@@ -43,28 +42,6 @@ export class FindFruitComponent {
   selectedFruits: any[] = [];
   matchedFruits: any[] = [];
   score: number = 0;
-
-  // toggleImage(fruit: any, i: number) {
-  //   fruit.showImage = true;
-  //   this.selectedFruits.push(fruit);
-  //   if (this.selectedFruits.length >= 2) {
-  //     if (this.selectedFruits[0].imagePath === this.selectedFruits[1].imagePath) {
-  //       this.matchedFruits.push(this.selectedFruits);
-  //       this.selectedFruits = [];
-  //       console.log('matched', this.matchedFruits);
-  //       console.log('temp', this.selectedFruits);
-  //       this.score += 1;
-  //     }
-  //     else if (this.selectedFruits[0].imagePath !== this.selectedFruits[1].imagePath) {
-  //       setTimeout(() => {
-  //         this.selectedFruits[0].showImage = false;
-  //         this.selectedFruits[1].showImage = false;
-  //         console.log('ifNotEqual', this.selectedFruits);
-  //         this.selectedFruits = [];
-  //       }, 1000)
-  //     }
-  //   }
-  // }
 
   toggleImage(fruit: any, i: number) {
     if (!fruit.showImage) {
